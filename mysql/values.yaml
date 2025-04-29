@@ -1,0 +1,5 @@
+deployement:
+  imageVersion: latest
+  replicas: 2
+service:
+  port: 3306

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    tier: frontend
+    app: nginx
+  ports:
+  - name: nginx-serviceport
+    protocol: TCP
+    port: {{ .Values.service.port }} #service port
+    targetPort: 80 # container port
