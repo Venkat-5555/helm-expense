@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: joindevops/mysql:{{ .Values.deployment.version }}
+        image: joindevops/mysql:{{ .Values.deployment.imageversion }}
