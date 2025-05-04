@@ -9,7 +9,7 @@ metadata:
     project: expense
 spec:
   # modify replicas according to your case
-  replicas: {{ .values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels: # selector labels
       app: mysql
@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: joindevops/mysql:{{ .values.deployment.version }}
+        image: joindevops/mysql:{{ .Values.deployment.version }}
