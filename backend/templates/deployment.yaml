@@ -17,7 +17,7 @@ metadata:
     project: expense
 spec:
   # modify replicas according to your case
-  replicas: {{ .values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels: # selector labels
       app: backend

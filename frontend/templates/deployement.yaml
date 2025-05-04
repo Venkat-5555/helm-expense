@@ -9,7 +9,7 @@ metadata:
     project: expense
 spec:
   # modify replicas according to your case
-  replicas: {{ .values deployment.replicas }}
+  replicas: {{ .Values deployment.replicas }}
   selector:
     matchLabels: # selector labels
       app: frontend
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: joindevops/frontend:{{ .values.deployement.version }}
+        image: joindevops/frontend:{{ .Values.deployment.imageversion }}
         resources:
           requests:
             cpu: 100m
